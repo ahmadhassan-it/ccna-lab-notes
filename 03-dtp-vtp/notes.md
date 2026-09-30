@@ -6,6 +6,8 @@ Goal
 Build a static 802.1Q trunk with DTP turned off.
 Set up VTP with a server, a transparent switch, and a client.
 Prove that VLAN information reaches the client through the transparent switch.
+Topology
+text
    SW1 (VTP Server)
         |
       trunk
@@ -15,7 +17,8 @@ Prove that VLAN information reaches the client through the transparent switch.
       trunk
         |
    SW3 (VTP Client)
-   Domain name on all switches: CCNA. VTP version running: 1.
+
+Domain name on all switches: CCNA. VTP version running: 1.
 
 The three protocols (do not mix them up)
 Protocol	Question it answers
@@ -25,11 +28,16 @@ VTP	Which VLANs should exist on the switches?
 Configuration
 
 Trunk ports (static trunk, DTP off):
+
+text
 interface GigabitEthernet0/1
  switchport mode trunk
  switchport nonegotiate
- VTP (change the mode on each switch):
- vtp domain CCNA
+
+VTP (change the mode on each switch):
+
+text
+vtp domain CCNA
 vtp version 1
 vtp mode server        ! SW1
 vtp mode transparent   ! SW2
