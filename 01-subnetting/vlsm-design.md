@@ -15,7 +15,7 @@ Router interface status:
 
 Ping from PC1 to PC3:
 
-![Ping test](ping-test.png)
+![Ping test](ping-pc1-to-pc3.png)
 ## Method
 
 1. List the host needs.
