@@ -1,21 +1,21 @@
 # VLSM Design
 ## Lab Topology
 
-![Topology](topology.png)
+![Topology](screenshots/topology.png)
 
 ## Verification
 
 PC1 configuration:
 
-![PC1 ipconfig](pc1-ipconfig.png)
+![PC1 ipconfig](screenshots/pc1-ipconfig.png)
 
 Router interface status:
 
-![Interface status](ip-interface-brief.png)
+![Interface status](screenshots/ip-interface-brief.png)
 
 Ping from PC1 to PC3:
 
-![Ping test](ping-pc1-to-pc3.png)
+![Ping test](screenshots/ping-pc1-to-pc3.png)
 ## Method
 
 1. List the host needs.
