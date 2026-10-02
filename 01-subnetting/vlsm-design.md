@@ -23,35 +23,14 @@ Ping from PC1 to PC3:
 3. Pick the smallest prefix that fits each need.
 4. Allocate the largest first, then continue from the next free address.
 
-## Worked Example
+## Lab Address Plan
 
 Network: 192.168.10.0/24
 
-| Segment | Hosts needed | Prefix | Network | Usable range | Broadcast |
-|---------|-------------:|--------|---------|--------------|-----------|
-| A | 100 | /25 | 192.168.10.0 | .1 – .126 | .127 |
-| B | 50 | /26 | 192.168.10.128 | .129 – .190 | .191 |
-| C | 25 | /27 | 192.168.10.192 | .193 – .222 | .223 |
-| D | 10 | /28 | 192.168.10.224 | .225 – .238 | .239 |
+| Subnet | Prefix | Network | Usable range | Broadcast | Usable hosts | R1 gateway |
+|--------|--------|---------|--------------|-----------|-------------:|------------|
+| Switch1 / PC1 | /26 | 192.168.10.0 | .1 – .62 | .63 | 62 | 192.168.10.1 |
+| Switch2 / PC2 | /27 | 192.168.10.64 | .65 – .94 | .95 | 30 | 192.168.10.65 |
+| Switch3 / PC3 | /28 | 192.168.10.96 | .97 – .110 | .111 | 14 | 192.168.10.97 |
 
-Free space left: 192.168.10.240 – .255 (one /28 block).
-
-Why largest first: each subnet must start on a multiple of its block size. If small subnets go first, they can leave gaps that a large subnet cannot use.
-
-## My Lab Problem
-
-(Fill this in from the VLSM problem you actually solved with 192.168.10.0/24.)
-
-Requirements:
-
-| Segment | Hosts needed |
-|---------|-------------:|
-| | |
-
-My solution:
-
-| Segment | Prefix | Network | Usable range | Broadcast |
-|---------|--------|---------|--------------|-----------|
-| | | | | |
-
-What I got wrong at first and how I fixed it:
+The subnets are allocated largest first and do not overlap.
