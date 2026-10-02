@@ -1,0 +1,192 @@
+Vocabulary
+
+	
+
+Simple meaning
+
+	
+
+Example
+
+
+
+
+Prepare for an exam
+
+	
+
+Study for a test
+
+	
+
+I’m preparing for my IELTS exam.
+
+
+
+
+Academic subject
+
+	
+
+A subject studied in school or college
+
+	
+
+Biology was one of my academic subjects.
+
+
+
+
+Career opportunities
+
+	
+
+Chances to get a job or develop a career
+
+	
+
+IT offers many career opportunities.
+
+
+
+
+Problem-solving
+
+	
+
+Finding ways to deal with problems
+
+	
+
+I enjoy problem-solving in IT.
+
+
+
+
+Concentrate on
+
+	
+
+Give your attention to something
+
+	
+
+I concentrate better in the morning.
+
+
+
+
+Get distracted
+
+	
+
+Lose focus
+
+	
+
+I get distracted by my phone.
+
+
+
+
+Study independently
+
+	
+
+Study by yourself
+
+	
+
+I prefer to study independently at home.
+
+
+
+
+Ask for help
+
+	
+
+Request assistance
+
+	
+
+I ask my teacher for help when I’m confused.
+
+
+
+
+Learning resources
+
+	
+
+Materials or tools that help you learn
+
+	
+
+YouTube provides useful learning resources.
+
+
+
+
+Improve my communication skills
+
+	
+
+Become better at communicating
+
+	
+
+I want to improve my communication skills.
+
+
+
+
+Gain confidence
+
+	
+
+Become more confident
+
+	
+
+Practising English helps me gain confidence.
+
+
+
+
+hostname R1
+!
+ip cef
+no ipv6 cef
+!
+spanning-tree mode pvst
+!
+interface GigabitEthernet0/0
+ ip address 192.168.10.1 255.255.255.192
+ duplex auto
+ speed auto
+!
+interface GigabitEthernet0/1
+ ip address 192.168.10.65 255.255.255.224
+ duplex auto
+ speed auto
+!
+interface GigabitEthernet0/2
+ ip address 192.168.10.97 255.255.255.240
+ duplex auto
+ speed auto
+!
+interface Vlan1
+ no ip address
+ shutdown
+!
+ip classless
+!
+line con 0
+!
+line aux 0
+!
+line vty 0 4
+ login
+!
+end
