@@ -4,6 +4,11 @@
 
 Subnetting is the process of dividing an IP network into smaller networks called subnets. I practiced calculating subnet masks, block sizes, network addresses, broadcast addresses, usable host ranges, and host counts. Subnetting is important in real-world networks because it helps organize IP addresses, reduce unnecessary broadcast traffic, and allocate addresses efficiently.
 
+## Related Files
+
+* [Practice problems](practice.md)
+* [VLSM design](vlsm-design.md)
+
 ## Key Concepts
 
 * Prefix length → subnet mask
@@ -38,21 +43,10 @@ Total Addresses = 2^(host bits)
 
 Usable Hosts = 2^(host bits) - 2
 
+Number of Subnets = 2^(borrowed bits)
+
 Broadcast Address = next subnet boundary - 1
 ```
-
-## What I Practiced
-
-* Converted CIDR prefixes into subnet masks.
-* Calculated block sizes and subnet boundaries.
-* Found network and broadcast addresses.
-* Calculated first and last usable addresses.
-* Calculated the number of usable hosts.
-* Solved subnetting questions with different prefix lengths.
-* Practiced subnetting in different octets, including `/17`.
-* Solved host-requirement questions by selecting the appropriate prefix.
-* Practiced VLSM by allocating different subnet sizes according to host requirements.
-* Completed a VLSM lab-style problem using `192.168.10.0/24`, allocating `/26`, `/27`, and `/28` subnets.
 
 ## Example
 
@@ -72,6 +66,18 @@ Last Usable:    192.168.45.190
 Usable Hosts:   30
 ```
 
+## Binary View (why the block size works)
+
+```text
+Last octet:      173 = 10101101
+Mask (last):     224 = 11100000
+AND result:           10100000 = 160  → network address
+Host bits all 1:      10111111 = 191  → broadcast address
+```
+
+The /27 mask has 3 network bits in the last octet and 5 host bits.
+2^5 = 32, so the block size is 32 and the subnets start at 0, 32, 64 ... 160, 192.
+
 ## VLSM
 
 For VLSM, I learned to:
@@ -90,6 +96,31 @@ Example:
 25 hosts  → /27
 10 hosts  → /28
 ```
+
+See [vlsm-design.md](vlsm-design.md) for the full address table.
+
+## Extra Facts
+
+* Number of subnets = 2^(borrowed bits). Example: /24 → /27 borrows 3 bits, so 2^3 = 8 subnets.
+* Private IPv4 ranges:
+  * 10.0.0.0/8
+  * 172.16.0.0/12
+  * 192.168.0.0/16
+* A /31 has 2 addresses and is used on point-to-point links (no network or broadcast address wasted).
+* A /32 is a single host address.
+
+## What I Practiced
+
+* Converted CIDR prefixes into subnet masks.
+* Calculated block sizes and subnet boundaries.
+* Found network and broadcast addresses.
+* Calculated first and last usable addresses.
+* Calculated the number of usable hosts.
+* Solved subnetting questions with different prefix lengths.
+* Practiced subnetting in different octets, including `/17`.
+* Solved host-requirement questions by selecting the appropriate prefix.
+* Practiced VLSM by allocating different subnet sizes according to host requirements.
+* Completed a VLSM lab-style problem using `192.168.10.0/24`, allocating `/26`, `/27`, and `/28` subnets.
 
 ## Challenge and How I Solved It
 
