@@ -12,10 +12,10 @@ Subnetting is the process of dividing an IP network into smaller networks called
 * [Practice problems](practice.md)
 * [Packet Tracer lab file](subnetting-lab.pkt)
 * [R1 configuration](R1-config.txt)
-* [Topology diagram](topology.png)
-* [PC1 configuration screenshot](pc1-ipconfig.png)
-* [Router interface status screenshot](ip-interface-brief.png)
-* [Ping test screenshot](ping-pc1-to-pc3.png)
+* [Topology diagram](screenshots/topology.png)
+* [PC1 configuration screenshot](screenshots/pc1-ipconfig.png)
+* [Router interface status screenshot](screenshots/ip-interface-brief.png)
+* [Ping test screenshot](screenshots/ping-pc1-to-pc3.png)
 
 ## Key Concepts
 
