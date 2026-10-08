@@ -5,3 +5,4 @@ Hands-on CCNA lab notes and configurations
  - [VLAN Configuration](./02-vlan-configuration/notes.md)
  - [DTP and VTP](./03-dtp-vtp/notes.md)
  - [STP and RSTP](./04-stp-rstp/notes.md)
+ -[Inter-VLAN Routing (Router-on-a-Stick)](./05-inter-vlan-routing/notes.md)
